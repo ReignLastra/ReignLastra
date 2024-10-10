@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+class Counter extends StatelessWidget {
+  const Counter({super.key});
+// Lastra Reign Pressed
+// Change the StatefulWidget to StatelessWidget
+// Remove the class State and Stateless
+void callback(){ //add this method to callBack function
+  print('Pressed');
+
+}
+   @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        ElevatedButton(
+          onPressed: callback,
+          child: const Text('Button'),
+        ),
+      ],
+    );
+  }
+}
+
+void main() {
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Counter(),
+        ),
+      ),
+    ),
+  );
+}
